@@ -14,8 +14,8 @@ class ImageHash
     private ImageManager $driver;
 
     public function __construct(
-        Implementation $implementation = null,
-        ImageManager $driver = null
+        ?Implementation $implementation = null,
+        ?ImageManager $driver = null
     ) {
         $this->implementation = $implementation ?: $this->defaultImplementation();
         $this->driver = $driver ?: $this->defaultDriver();
